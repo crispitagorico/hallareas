@@ -3,6 +3,8 @@
 ################################################################################
 
 /.vs
+/.ipynb_checkpoints
+/__pycache__
 /areas44.py
 /Hall tree rewriting algo.ipynb
 /Riemann vs Triangles.ipynb
