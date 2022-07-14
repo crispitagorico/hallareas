@@ -1218,6 +1218,7 @@ def lessExpressionStandardHall(a,b):
          return lessExpressionStandardHall(a[1],b[1])
     return lessExpressionStandardHall(a[0],b[0])
 
+
 def nOfDerivedBasisElement(e):
     """If e is an element of a Hall basis 'compatible with the derived series',
        then it must be a member of some H_n. See section 5.3. Return that n.

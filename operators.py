@@ -47,17 +47,24 @@ def lieFromTree(tup):
     assert len(tup)==2
     return lieProduct(lieFromTree(tup[0]),lieFromTree(tup[1]))
 
-def hsFromTree(tup):
+def lhsFromTree(tup):
     assert type(tup) is tuple
     if len(tup)==1:
         return(letter2Elt(tup[0]))
     assert len(tup)==2
-#     return rightHalfShuffleProduct(hsFromTree(tup[0]),hsFromTree(tup[1]))
-    return leftHalfShuffleProduct(hsFromTree(tup[0]),hsFromTree(tup[1]))
+    return leftHalfShuffleProduct(lhsFromTree(tup[0]),lhsFromTree(tup[1]))
+
+def rhsFromTree(tup):
+    assert type(tup) is tuple
+    if len(tup)==1:
+        return(letter2Elt(tup[0]))
+    assert len(tup)==2
+    return rightHalfShuffleProduct(rhsFromTree(tup[0]),rhsFromTree(tup[1]))
 
 
-def area(a,b):
-#     return rightHalfShuffleProduct(a,b)-rightHalfShuffleProduct(b,a)
+def area(a,b,lhs=True):
+    if not lhs:
+        return rightHalfShuffleProduct(a,b)-rightHalfShuffleProduct(b,a)
     return leftHalfShuffleProduct(a,b)-leftHalfShuffleProduct(b,a)
 
 def area_(a):

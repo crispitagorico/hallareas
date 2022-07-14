@@ -2,8 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
-/.ipynb_checkpoints
+/vs
+/ipynb_checkpoints
 /__pycache__
 /areas44.py
 /Hall tree rewriting algo.ipynb
